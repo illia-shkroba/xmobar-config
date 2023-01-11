@@ -1,0 +1,4 @@
+---
+resolver: lts-20.6
+packages:
+  - xmobar
