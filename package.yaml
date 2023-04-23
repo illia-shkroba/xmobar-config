@@ -1,0 +1,35 @@
+---
+name:                xmobar-config
+version:             0.1.0.0
+github:              "illia-shkroba/xmobar-config"
+license:             MIT
+author:              "Illia Shkroba"
+copyright:           "2023 Illia Shkroba"
+
+extra-source-files:
+  - README.md
+  - LICENSE
+
+description: Please see the README on GitHub at <https://github.com/illia-shkroba/xmobar-config#readme>
+
+dependencies:
+  - base >= 4.7 && < 5
+  - xmobar
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Widentities
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wmissing-export-lists
+  - -Wmissing-home-modules
+  - -Wno-unused-do-bind
+  - -Wpartial-fields
+  - -Wredundant-constraints
+
+executables:
+  xmobar:
+    main: xmobar.hs
+    source-dirs: .
+    ghc-options: []
