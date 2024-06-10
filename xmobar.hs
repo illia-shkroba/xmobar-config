@@ -26,6 +26,12 @@ config =
             36000
         , Run $
           Cpu ["-L", "3", "-H", "50", "--high", "red", "--normal", "green"] 10
+        , Run $
+          Com
+            "sh"
+            ["-c", "wpctl get-volume \"$(wpctl-get-default-sink)\""]
+            "volume"
+            10
         , Run $ Memory ["--template", "Mem: <usedratio>%"] 10
         , Run $ Date "%a %Y-%m-%d <fc=#8be9fd>%H:%M</fc>" "date" 10
         , Run XMonadLog
@@ -35,7 +41,7 @@ config =
     , overrideRedirect = False
     , position = TopW L 100
     , sepChar = "%"
-    , template = "%XMonadLog% }{ %cpu% | %memory% | %EGPF% | %date% "
+    , template = "%XMonadLog% }{ %cpu% | %memory% | %volume%  | %EGPF% | %date% "
     }
 
 main :: IO ()
