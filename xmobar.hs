@@ -35,7 +35,7 @@ config =
     , overrideRedirect = False
     , position = TopW L 100
     , sepChar = "%"
-    , template = "%XMonadLog% }{ %cpu% | %memory% * %swap% | %EGPF% | %date% "
+    , template = "%XMonadLog% }{ %cpu% | %memory% | %EGPF% | %date% "
     }
 
 main :: IO ()
