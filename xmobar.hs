@@ -15,6 +15,7 @@ config =
             ["-c", "wpctl get-volume \"$(wpctl-get-default-sink)\""]
             "volume"
             10
+        , Run $ Com "sh" ["-c", "echo \"[$(pfile which)]\""] "profile" 10
         , Run $ Battery ["--template", "Batt: <left>% (<timeleft>)"] 100
         , Run $ Memory ["--template", "Mem: <usedratio>%"] 10
         , Run $ Date "%a %Y-%m-%d <fc=#8be9fd>%H:%M</fc>" "date" 10
@@ -25,7 +26,7 @@ config =
     , overrideRedirect = False
     , position = TopW L 100
     , sepChar = "%"
-    , template = "%XMonadLog% }{ %cpu% | %memory% | %volume% | %battery% | %date% "
+    , template = "%XMonadLog% }{ %profile% | %cpu% | %memory% | %volume% | %battery% | %date% "
     }
 
 main :: IO ()
