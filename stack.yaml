@@ -3,4 +3,4 @@ resolver: lts-21.25
 
 extra-deps:
   - git: https://codeberg.org/xmobar/xmobar.git
-    commit: c9b6bf77415afff2dbd7b8e33ccdd21b771fbec0
+    commit: 42630b2973cd624fceb33ae442dea4bf565ee5b1
