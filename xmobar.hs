@@ -8,23 +8,6 @@ config =
     , bgColor = "#5f5f5f"
     , commands =
         [ Run $
-          Weather
-            "EGPF"
-            [ "--template"
-            , "<weather> <tempC>C"
-            , "-L"
-            , "0"
-            , "-H"
-            , "25"
-            , "--low"
-            , "lightblue"
-            , "--normal"
-            , "#f8f8f2"
-            , "--high"
-            , "red"
-            ]
-            36000
-        , Run $
           Cpu ["-L", "3", "-H", "50", "--high", "red", "--normal", "green"] 10
         , Run $
           Com
@@ -42,7 +25,7 @@ config =
     , overrideRedirect = False
     , position = TopW L 100
     , sepChar = "%"
-    , template = "%XMonadLog% }{ %cpu% | %memory% | %volume% | %battery% | %EGPF% | %date% "
+    , template = "%XMonadLog% }{ %cpu% | %memory% | %volume% | %battery% | %date% "
     }
 
 main :: IO ()
